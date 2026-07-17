@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03 | NG-MODEL & NG-BIND DIRECTIVE </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        body {
+            background-color: {{color}};
+        }
+    </style>
+
+</head>
+
+<body ng-model="color">
+    <h2>AngularJS - 03 | NG-MODEL & NG-BIND DIRECTIVE</h2>
+    <fieldset>
+        <legend style="font-size: 8px; ">NG-MODEL & NG-BIND DIRECTIVE</legend>
+
+        <form>
+            <!-- Change the background color of the page by entering a color name 
+            or hex code in the input field below: -->
+            <label for="color">Enter a color:</label>
+            <input type="text" id="color" ng-model="color" placeholder="Enter a colorName for BG!">
+            
+            <br>
+            <br>
+
+            <label for="name">Enter your name:</label>
+            <!-- using ng-model directive,  -->
+            <input type="text" id="name" ng-model="name" placeholder="Enter your name">
+
+            <!-- the value of the input field is bound to the variable "name" in the AngularJS scope. -->
+            <p>Hello, {{name}}!</p>
+
+            <!-- The ng-bind directive is used to display the value of "name" in the paragraph element. -->
+            <p ng-bind="name"></p>
+
+            <select ng-model="selectedOption">
+                <option value="">Select a language</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JAVASCRIPT">JAVASCRIPT</option>
+                <option value="ANGULAR JS">ANGULAR JS</option>
+                <option value="REACT">REACT</option>
+            </select>
+            <p>You selected: {{selectedOption}}</p>
+
+        </form>
+    </fieldset>
+</body>
+
+</html>
