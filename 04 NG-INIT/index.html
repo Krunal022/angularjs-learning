@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 | NG-INIT IN ANGULAR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<style>
+    body {
+        padding: 2rem;
+    }
+</style>
+
+<body>
+
+    <h1>NG-INIT Directive in AngularJS</h1>
+
+    <div ng-init="name='Krunal';age=22;sex='Male';">
+        <p>Example of ng-init directive to initialize <mark>variables in AngularJS.</mark></p>
+        <ol type="1">
+            <li>Name: {{name}}</li>
+            <li>Age: {{age}}</li>
+            <li>Gender: {{sex}}</li>
+        </ol>
+    </div>
+
+    <div ng-init="Student={ Class:'BE. CSD', RollNo: 240413149011, College:'SVIT, Vasad'}">
+        <p>Example of ng-init directive to initialize an <mark>object in AngularJS.</mark></p>
+        <ol type="a">
+            <li>Class: {{Student.Class}}</li>
+            <li>Enrollment No: {{Student.RollNo}}</li>
+            <li>College Name: {{Student.College}}</li>
+        </ol>
+    </div>
+
+    <div ng-init="fruits=['Apple','Banana','Mango']">
+        <p>Example of ng-init directive to initialize an <mark>array in AngularJS.</mark></p>
+        <ol type="i">
+            <li>Array: {{fruits}}</li>
+            <li>First Fruit: {{fruits[0]}}</li>
+            <li>Second Fruit: {{fruits[1]}}</li>
+            <li>Third Fruit: {{fruits[2]}}</li>
+        </ol>
+    </div>
+
+    <div
+        ng-init="person={ name:'Krunal', age:22, sex:'Male', address:{ city:'Vadodara', state:'Gujarat', country:'India'}}">
+        <p>Example of ng-init directive to initialize a <mark>nested object in AngularJS.</mark></p>
+        <ol type="i">
+            <li>Name: {{person.name}}</li>
+            <li>Age: {{person.age}}</li>
+            <li>Gender: {{person.sex}}</li>
+            <li>City: {{person.address.city}}</li>
+            <li>State: {{person.address.state}}</li>
+            <li>Country: {{person.address.country}}</li>
+        </ol>
+    </div>
+
+    <div
+        ng-init="person={ name:'Krunal', age:22, sex:'Male', address:{ city:'Vadodara', state:'Gujarat', country:'India'}, hobbies:['Reading','Coding','Travelling']}">
+        <p>Example of ng-init directive to initialize a <mark>nested object with array in AngularJS.</mark></p>
+        <ol type="i">
+            <li>Name: {{person.name}}</li>
+            <li>Age: {{person.age}}</li>
+            <li>Gender: {{person.sex}}</li>
+            <li>City: {{person.address.city}}</li>
+            <li>State: {{person.address.state}}</li>
+            <li>Country: {{person.address.country}}</li>
+            <li>Hobbies: {{person.hobbies}}</li>
+            <li>First Hobby: {{person.hobbies[0]}}</li>
+            <li>Second Hobby: {{person.hobbies[1]}}</li>
+            <li>Third Hobby: {{person.hobbies[2]}}</li>
+        </ol>
+    </div>
+
+    <div
+        ng-init="person={ name:'Krunal', age:22, sex:'Male ', address:{ city:'Vadodara', state:'Gujarat', country:'India'}, hobbies:['Reading','Coding','Travelling'], skills:{ programming:['C','C++','Java','Python'], webDevelopment:['HTML','CSS','JavaScript','AngularJS']}}">
+        <p>Example of ng-init directive to initialize a <mark>nested object with array and nested object in
+                AngularJS.</mark></p>
+        <ol type="i">
+            <li>Name: {{person.name}}</li>
+            <li>Age: {{person.age}}</li>
+            <li>Gender: {{person.sex}}</li>
+            <li>City: {{person.address.city}}</li>
+            <li>State: {{person.address.state}}</li>
+            <li>Country: {{person.address.country}}</li>
+            <li>Hobbies: {{person.hobbies}}</li>
+            <li>First Hobby: {{person.hobbies[0]}}</li>
+            <li>Second Hobby: {{person.hobbies[1]}}</li>
+            <li>Third Hobby: {{person.hobbies[2]}}</li>
+            <li>Programming Skills: {{person.skills.programming}}</li>
+            <li>Web Development Skills: {{person.skills.webDevelopment}}</li>
+        </ol>
+    </div>
+
+
+    <p> Example of ng-init directive to initialize <mark>variables and perform calculations in AngularJS.</mark></p>
+    <div ng-init="Quantity=null;Price=null;">
+        <label for="">Quantity:</label>
+        <input type="number" ng-model="Quantity">
+        <br><br>
+        <label for="">Price: </label>
+        <input type="number" ng-model="Price">
+
+        <p>Quantity: {{Quantity}} × Price: {{Price}} = Total Cost: {{Quantity*Price}} </p>
+    </div>
+
+</body>
+
+</html>
