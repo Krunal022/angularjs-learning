@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<!-- myApp is the name of the module that we created in module.js -->
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVC | Model View Controller</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <!--  add the module.js file  -->
+    <script src="module.js"></script>
+</head>
+
+<!-- ng-controller is used to bind the controller to the view. -->
+
+<body ng-controller="MainController">
+    <h1>{{ message }}</h1>
+</body>
+
+</html>
