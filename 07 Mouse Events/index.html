@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07 - Mouse Events in AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+    <style>
+        body {
+            @media (max-width:600px) {
+                flex-direction: column;
+                gap: .5rem;
+            }
+        }
+    </style>
+</head>
+
+<body ng-controller="myController" style="display: flex; justify-content: space-evenly; padding: .5rem;">
+    <div class="container" style="border:solid black 1px; padding: 1rem 3rem;">
+        <h1>{{name}}</h1>
+        <p>inCrease this count on singleClick › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-click="increment()">singleClick+ 📈</button>
+        <br>
+        <p>inCrease this count on DoubleClick › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-dblclick="increment()">DoubleClick+ 📈</button>
+        <br>
+        <p>inCrease this count on MouseDown › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-mousedown="increment()">MouseDown+ 📈</button>
+        <br>
+        <p>inCrease this count on MouseUp › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-mouseup="increment()">MouseUp+ 📈</button>
+        <br>
+        <p>inCrease this count on Mouseover › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-mouseover="increment()">Mouseover+ 📈</button>
+        <br>
+        <p>inCrease this count on MouseEnter › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-mouseenter="increment()">MouseEnter+ 📈</button>
+        <br>
+        <p>inCrease this count on MouseMove › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-mousemove="increment()">MouseMove+ 📈</button>
+        <br>
+        <p>inCrease this count on MouseLeave › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <button style="cursor: pointer;" ng-mouseleave="increment()">MouseLeave+ 📈</button>
+    </div>
+
+    <div class="container-2" style="border:solid black 1px; padding: 1rem 3rem;">
+        <h1>{{name2}}</h1>
+        <p>inCrease this count on KeyPress › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <input placeholder="Type Something..." style="cursor: pointer;" ng-keypress="increment()"></input>
+        <br>
+        <p>inCrease this count on KeyUp › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <input placeholder="Works When KeyGoesUp" style="cursor: pointer;" ng-keyup="increment()"></input>
+        <br>
+        <p>inCrease this count on KeyDown › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <input placeholder="Works When KeyGoesDown" style="cursor: pointer;" ng-keydown="increment()"></input>
+        <br>
+        <h1>{{name3}}</h1>
+        <p>inCrease count On Focus the Feild! › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <input placeholder="Works When input Focus" style="cursor: pointer;" ng-focus="increment()"></input>
+        <br>
+        <p>inCrease count On Blur(unFocus) the Feild! › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <input placeholder="Works When input Blur" style="cursor: pointer;" ng-blur="increment()"></input>
+        <br>
+        <h1>{{name4}}</h1>
+        <p>inCrease count On Copy/Paste or Cut the text › <mark>ㅤ{{count}}ㅤ</mark></p>
+        <input placeholder="Copy-paste-cut*" style="cursor: pointer;" ng-copy="increment()" ng-paste="increment()"
+            ng-cut="increment()"></input>
+    </div>
+
+    </div>
+</body>
+
+</html>
