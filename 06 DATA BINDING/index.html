@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 | Data binding in Angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+
+<body ng-controller="myController">
+
+    <!-- Actual value of name is displayed using {{name}} and ng-bind="name" -->
+    <small><mark> one way data binding is used to display the value</mark></small>
+
+    <br> <br>
+    <span><small>use Angular Expressions {}{} →</small></span>ㅤ
+
+    <p style="display: inline;"><mark>{{name}}</mark></p><br>
+
+
+    <span><small>use ng-bind →</small></span>ㅤ
+    <p ng-bind="name" style="display: inline;"></p><br> <br>
+
+    <hr style="width:30%; text-align:left ; margin-left:0"><br>
+
+    <!-- ng-model is used to bind the value of input field to the variable name -->
+    <small><mark> two way data binding is used to bind the value of input field to the variable name</mark></small>
+
+    <p>you can change the value of name using input field:</p>
+    <p>This concept is called <mark>two-way data binding</mark>. <br>When you change the value of name using input
+        field, it
+        will automatically update the value of name in table</p>
+    <table border="0" style="font-size:1.2rem">
+        <tr>
+            <td>Name:</td>
+            <td><input style="font-size:1.2rem" type="text" placeholder="set your name" ng-model="obj.name"></td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td><input style="font-size:1.2rem" type="text" placeholder="set your age" ng-model="obj.age"></td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td><input style="font-size:1.2rem" type="text" placeholder="set your city" ng-model="obj.city"></td>
+        </tr>
+    </table>
+
+    <br>
+    <hr style="width:20%; text-align:left ; margin-left:0"> <br>
+
+    <span><small>Display the value of name, age and city in table using AngularExpressions!</small></span>ㅤ
+
+    <table border="3" style="font-size:1.2rem">
+        <tr>
+            <td>Name:</td>
+            <td>{{obj.name}}</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>{{obj.age}}</td>
+        </tr>
+        <tr>
+            <td>City:</td>
+            <td>{{obj.city}}</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
