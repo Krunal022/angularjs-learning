@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops in Angular | ng-repeat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+<style>
+    body {
+        font-size: 1.2rem;
+    }
+
+    hr {
+        margin-left: 0;
+        width: 20%;
+    }
+</style>
+
+
+<body ng-controller="myController">
+    <p style="font-size: 2rem;">{{heading}}</p>
+    <ol>
+        <li ng-repeat="item in friute">
+            {{item}}
+        </li>
+    </ol>
+    <hr>
+    <ol>
+        <li ng-repeat="(x,y) in myObj" type="a">
+            {{x}} : {{y}}
+        </li>
+    </ol>
+    <hr>
+    <table border="2">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr ng-repeat="item in myArray">
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>{{item.city}}</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
