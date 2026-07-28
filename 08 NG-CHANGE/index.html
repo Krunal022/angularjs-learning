@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NG-CHANGE DIRECTIVE IN ANGULAR</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <p>This is the example of <mark>ng-change</mark> , <mark>ng-model</mark></p>
+
+    <p><small>this count will increase when you typeSomething › </small><mark>ㅤ{{count}}ㅤ</mark></p>
+    <label for="#">TypeHere:</label>
+    <input type="text" placeholder="write anything.." ng-model="name2" ng-change="increment()">
+    <p><small>Value: </small>{{name2}}</p>
+
+    <div>
+        <p><small>this count will increase when you select an option › </small><mark>ㅤ{{number}}ㅤ</mark></p>
+        <label for="#">Select an option:</label>
+        <select ng-model="selectedOption" ng-change="optionChanged()">
+            <option value="">Select an option</option>
+            <option value="MODEL">MODEL</option>
+            <option value="VIEW">VIEW</option>
+            <option value="CONTROLLER">CONTROLLER</option>
+        </select>
+        <p><small>Selected Option: </small>{{selectedOption}}</p>
+
+    </div>
+</body>
+
+</html>
