@@ -2,7 +2,7 @@ const app = angular.module("myApp", [])
 
 app.controller("myController", function ($scope) {
     $scope.heading = "Ng-Repeat 🔂"
-    $scope.friute = ["Apple🍎", "Banana🍌", "Mango🥭", "Orange🍊", "Grapes🍇", "Pineapple🍍", "Strawberry🍓"]
+    $scope.fruits = ["Apple🍎", "Banana🍌", "Mango🥭", "Orange🍊", "Grapes🍇", "Pineapple🍍", "Strawberry🍓"]
     $scope.myObj = {
         name: "Krunal",
         age: 22,
