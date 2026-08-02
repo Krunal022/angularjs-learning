@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Filters</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+<style>
+    hr{
+        width: 20%;
+        margin-left: 0;
+    }
+</style>
+
+<body ng-controller="myController">
+    <div>
+        <p>{{name | uppercase}}</p>
+        <p>{{name | lowercase}}</p>
+        <p>{{amount | number}}</p>
+        <p>{{amount | currency:"&dollar;"}}</p>
+        <hr>
+        <p>{{date | date:"h::mm::ss"}}</p>
+        <p>{{date | date:"shortDate"}}</p>
+        <p>{{date | date:"mediumDate"}}</p>
+        <p>{{date | date:"longDate"}}</p>
+        <p>{{date | date:"fullDate"}}</p>
+    </div>
+
+</body>
+
+</html>
