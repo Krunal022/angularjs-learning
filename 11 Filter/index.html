@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>011 | Filter in AngluarJS!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="module.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <p>{{msg}}</p>
+    <div>
+        <label for="value">Search your Fruit! ›</label>
+        <input type="Search Fruit!" ng-model="value" placeholder="Type here..">
+        <ol>
+            <li ng-repeat="fruit in fruits | filter:value" type="i">
+                {{fruit }}
+            </li>
+        </ol>
+    </div>
+    <div>
+        <label for="optionValue">Search via Name or Gender ›</label>
+        <select ng-model="optionValue">
+            <option value="">Options here!</option>
+            <optgroup label="Name">
+                <option value="Tina">Tina</option>
+                <option value="Krunal">Krunal</option>
+                <option value="Vishal">Vishal</option>
+                <option value="Riya">Riya</option>
+            </optgroup>
+            <optgroup label="Gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </optgroup>
+        </select>
+        <table border="1" style="margin-top: 1rem;">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Class</th>
+                <th>Gender</th>
+            </tr>
+            <tr ng-repeat="student in students | filter:optionValue:true">
+                <td>{{student.name}}</td>
+                <td>{{student.age}}</td>
+                <td>{{student.class}}</td>
+                <td>{{student.gender}}</td>
+            </tr>
+    </div>
+</body>
+
+</html>
